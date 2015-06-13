@@ -1,0 +1,60 @@
+/* material-ui */
+@import "node_modules/material-ui/src/less/scaffolding.less";
+@import "node_modules/material-ui/src/less/components.less";
+
+@grid: 8px;
+@app-bar-height: 64px;
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(http://fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2'), url(http://fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(http://fonts.gstatic.com/s/roboto/v15/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2'), url(http://fonts.gstatic.com/s/roboto/v15/2UX7WLTfW3W8TclTUvlFyQ.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(http://fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2'), url(http://fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+
+html {
+  background-color: #F2F2F2;
+  font-family: 'Roboto', sans-serif;
+}
+
+.content {
+  padding: @app-bar-height+@grid @grid @grid @grid;
+
+  .mui-paper {
+    background-color: #FFFFFF;
+    margin-bottom: @grid;
+    transform: rotateY(0deg);
+    transition:
+      transform 0.3s ease-in 0;
+
+
+    .text-card {
+      padding: @grid*2;
+
+      img{
+        height : 100px;
+        float:left;
+        padding-right: 10px;
+      }
+    }
+
+    .chart-card {}
+  }
+
+  .mui-paper.back {
+    transform: rotateY(360deg);
+  }
+}
