@@ -6,6 +6,7 @@ import Dog from './components/dog'
 import Cat from './components/cat'
 import Other from './components/other'
 import LeftNavi from './components/left-navi'
+import Info from './components/info'
 
 (function() {
 
@@ -26,6 +27,8 @@ import LeftNavi from './components/left-navi'
       <Route name="cat" handler={Cat} />
       <Route name="other" handler={Other} />
       <Route name="dog" handler={Dog} />
+      <Route name="info" handler={Info} />
+
     </Route>
   );
 

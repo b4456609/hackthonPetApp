@@ -7,6 +7,7 @@ var Dogs = React.createClass({
       return {pets: []};
     },
   componentDidMount: function() {
+    navigator.notification.activityStart('', '讀取中');
     console.log('componentDidMount');
     var url = 'http://140.121.197.135:11116/Animal/Animal?type=1';
     var self = this;
@@ -28,7 +29,8 @@ var Dogs = React.createClass({
         self.setState({
           pets: result
         });
-      }
+      }    navigator.notification.activityStop();
+
       }
 
   });

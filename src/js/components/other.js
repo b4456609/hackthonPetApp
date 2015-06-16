@@ -7,6 +7,7 @@ var Other = React.createClass({
       return {pets: []};
     },
   componentDidMount: function() {
+    navigator.notification.activityStart('', '讀取中');
     console.log('componentDidMount');
     var url = 'http://140.121.197.135:11116/Animal/Animal?type=2';
     var self = this;
@@ -29,6 +30,8 @@ var Other = React.createClass({
           pets: result
         });
       }
+      navigator.notification.activityStop();
+
       }
 
   });
